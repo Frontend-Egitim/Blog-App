@@ -1,3 +1,4 @@
+import { sizes } from "@/constants/sizes";
 import Link from "next/link";
 
 export const Navbar = () => {
@@ -21,7 +22,10 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="flex container justify-between my-6 mx-auto items-center">
+    <div
+      style={{ height: `${sizes.navbarHeight}vh` }}
+      className={`flex container justify-between mx-auto items-center`}
+    >
       <Link href={"/"} className="text-2xl text-amber-400 whitespace-nowrap">
         MY BLOG SITE
       </Link>

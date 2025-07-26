@@ -3,8 +3,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "cdn.pixabay.com",
+        hostname: "*", // gelen bütün image url lerini kabul et manasına gelir
       },
     ],
   },

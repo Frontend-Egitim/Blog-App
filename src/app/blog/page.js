@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function BlogPage() {
   try {
     let response = await fetch(
-      "https://68848c4c745306380a389657.mockapi.io/blog" // bu linke get isteği atıyorum (çağırıyorum)
+      "https://68848c66745306380a3896cc.mockapi.io/blog" // bu linke get isteği atıyorum (çağırıyorum)
     );
     var data = await response.json(); // response değişkeninin içindeki json türünde veriyi alıyorum.
     console.log(data);

@@ -1,3 +1,4 @@
+import { Card } from "@/components/card";
 import { sizes } from "@/constants/sizes";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,20 +20,7 @@ export default async function BlogPage() {
       style={{ minHeight: `${sizes.defaultScreenHeight}vh` }}
     >
       {data.map((item) => (
-        <Link
-          href={`/blog/${item.id}`}
-          key={item.id}
-          className="p-2 card bg-amber-950 rounded-2xl h-[250px]"
-        >
-          <Image
-            src={item.image_url}
-            width={300}
-            height={200}
-            alt=""
-            className="object-cover rounded-xl h-[180px] w-[300px]"
-          />
-          <h1 className="text-xl font-bold ">{item.title}</h1>
-        </Link>
+        <Card key={item.id} item={item} />
       ))}
     </div>
   );

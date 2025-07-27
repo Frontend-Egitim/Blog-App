@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function BlogPage() {
   try {
     let response = await fetch(
-      "https://68848c4c745306380a389657.mockapi.io/blog" // bu linke get isteği atıyorum (çağırıyorum)
+      "https://68848c5b745306380a3896a3.mockapi.io/blog" // bu linke get isteği atıyorum (çağırıyorum)
     );
     var data = await response.json(); // response değişkeninin içindeki json türünde veriyi alıyorum.
     console.log(data);
@@ -25,7 +25,7 @@ export default async function BlogPage() {
           className="p-2 card bg-amber-950 rounded-2xl h-[250px]"
         >
           <Image
-            src={item.image_url}
+            src={item.imageUrl}
             width={300}
             height={200}
             alt=""

@@ -5,7 +5,7 @@ export default async function Slug({ params }) {
 
   try {
     let response = await fetch(
-      `https://68848c4d745306380a389663.mockapi.io/blog/${id}` // bu linke get isteği atıyorum (çağırıyorum)
+      `https://68848c4d745306380a389663.mockapi.io/Blog/${id}` // bu linke get isteği atıyorum (çağırıyorum)
     );
     var data = await response.json(); // response değişkeninin içindeki json türünde veriyi alıyorum.
     console.log(data);

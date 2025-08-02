@@ -29,7 +29,7 @@ export default async function Slug({ params }) {
       <div className="flex container mx-auto  flex-col items-center pt-6">
         <div>
           <div className="border-4 border-yellow-200 p-5 rounded-lg mb-4 w-full max-w-3xl">
-            <h1 className="text-amber-900   text-3xl  border-t-amber-300  font-extrabold font-serif  text-center">
+            <h1 className="dark:text-amber-900   text-3xl  border-t-amber-300  light:text-amber-200  font-extrabold font-serif  text-center">
               {data.title}
             </h1>{" "}
           </div>{" "}

@@ -1,6 +1,18 @@
+'use client';
+
 import Image from "next/image";
 
-export default function contact() {
+export default function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    console.log(data); 
+  };
+
   return (
     <>
       <div className="p-5 rounded-lg mb-4 w-full max-w-3xl mx-auto flex container">
@@ -32,7 +44,21 @@ export default function contact() {
         </div>
       </div>
 
-    
+    <div className="bg-amber-900 border-8 bg-clip-border border-amber-200 shadow-lg max-w-4xl p-6 rounded-2xl space-y-4  mx-auto px-6 mb-20">
+  
+  
+<form>
+    <div> <label htmlFor="name"></label> <input className="text-yellow-950 font-mono text-2xl flex container" type="text" id="name" name="name" required placeholder="Adınız" /></div>
+     <div> <label htmlFor="surname"></label><input className="text-yellow-950 font-mono text-2xl flex container" type="text" id="surname" name="surname" required placeholder="Soyadınız" /></div>
+     <div> <label htmlFor="mail"></label><input className="text-yellow-950 font-mono text-2xl flex container" type="email" id="mail" name="mail"required placeholder="Mail" /></div>
+     <div> <label htmlFor="phone"></label><input className="text-yellow-950 font-mono text-2xl flex container" type="text" id="phone" name="phone" required placeholder="Telefon" /></div>
+     <div> <label htmlFor="adress"></label><input className="text-yellow-950 font-mono text-2xl flex container"  type="text" id="adress" name="adress" required placeholder="Adres" /></div>
+
+
+    <button className="text-yellow-950 font-mono text-2xl flex container" type="submit">Gönder</button>
+   
+  </form>
+  </div>
     </>
   );
 }

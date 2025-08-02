@@ -1,7 +1,12 @@
+"use client"
 import { sizes } from "@/constants/sizes";
 import Link from "next/link";
+import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
+import { useState } from "react";
 
 export const Navbar = () => {
+  const [isDark, setIsDark] = useState(false);
+  
   const links = [
     {
       title: "Home",
@@ -37,9 +42,14 @@ export const Navbar = () => {
         ))}
       </div>
 
+
+      <button onClick={() => setIsDark(!isDark)}>{isDark ? <SunIcon className="size-6"/> : <MoonIcon className="size-6"/>}</button>
+
       <button className="whitespace-nowrap bg-amber-100 text-amber-950 px-3 py-2 rounded-full">
         Sign In
       </button>
+
+     
     </div>
   );
 };

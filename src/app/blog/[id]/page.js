@@ -40,7 +40,7 @@ export default async function Slug({ params }) {
         />
         <div className="gap-6">
           <h1 className="text-5xl font-mono mb-6">{data.title}</h1>
-          <p className="text-gray-200 font-mono">{data.content}</p>
+          <p className="dark:text-gray-200 font-mono text-gray-700">{data.content}</p>
         </div>
       </div>
       <Link

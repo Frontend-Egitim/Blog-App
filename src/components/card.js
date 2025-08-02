@@ -6,7 +6,7 @@ export const Card = ({ item }) => {
     <Link
       href={`/blog/${item.id}`}
       key={item.id}
-      className="p-2  bg-neutral-800 rounded-lg h-[250px]"
+      className="p-2  bg-neutral-200 rounded-2xl h-[250px]"
     >
       <div>
         <Image

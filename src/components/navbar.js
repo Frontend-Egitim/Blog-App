@@ -1,14 +1,12 @@
-"use client"
+"use client";
 import { sizes } from "@/constants/sizes";
 import Link from "next/link";
-import { SunIcon } from '@heroicons/react/24/outline'
-import { MoonIcon } from '@heroicons/react/24/outline'
-import { useState } from "react";
-
+import { SunIcon } from "@heroicons/react/24/outline";
+import { MoonIcon } from "@heroicons/react/24/outline";
+import { useTheme } from "next-themes";
 
 export const Navbar = () => {
-
-  const [isDark, setIsDark] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const links = [
     {
@@ -43,14 +41,18 @@ export const Navbar = () => {
             {item.title}
           </Link>
         ))}
-      </div>
-       
-      <button
-      onClick={() => setIsDark(!isDark)}
-      >
-      {isDark ? <SunIcon className="size-6 text-black" />
-      : <MoonIcon className="size-6 text-black" />}
-      </button>
+      </div>{" "}
+      {theme == "dark" ? (
+        <SunIcon
+          className="size-6 cursor-pointer hover:text-amber-400 transition-colors"
+          onClick={() => setTheme("light")}
+        />
+      ) : (
+        <MoonIcon
+          className="size-6 cursor-pointer hover:text-amber-400 transition-colors"
+          onClick={() => setTheme("dark")}
+        />
+      )}
       <button className="whitespace-nowrap bg-amber-100 text-amber-950 px-3 py-2 rounded-full">
         Sign In
       </button>
